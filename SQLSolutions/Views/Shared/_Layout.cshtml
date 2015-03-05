@@ -1,0 +1,31 @@
+﻿@using System.Web.Optimization
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@ViewBag.Title - SQL Solutions</title>
+</head>
+<body>
+<header>
+    <h1>
+        <a href="@Url.RouteUrl("home")">SQL Solutions</a>
+    </h1>
+    @*TODO: confer with team about seperation of home and login pages*@
+    @*<a href="@Url.RouteUrl("login")"></a>*@
+</header>
+
+    @RenderBody()
+
+<footer>
+    &copy; @DateTime.UtcNow.Year - SQL Solutions Team
+</footer>
+
+    @Scripts.Render()
+    @*All scripts must go in section Scripts braces in the Views*@
+    @RenderSection("Scripts", false)
+</body>
+</html>
